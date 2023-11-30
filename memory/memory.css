@@ -1,0 +1,152 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #5080fe;
+}
+.carts{
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 250px;
+    left: 725px;
+    height: 400px;
+    width: 400px;
+    background: #F8F8F8;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.cart{
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.cart-transform{
+    transform: rotateY(180deg);
+}
+.cart-transform2{
+    transform: rotateY(180deg);
+}
+.front-face{
+    backface-visibility: hidden;
+    height: 35px;
+    width: 35px;
+}
+.back-face{
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position: absolute;
+    left: 25px;
+    height: 45px;
+    width: 45px;
+   
+}
+.shake-animation{
+    animation: shake 0.8s ease-in;
+}
+@keyframes shake {
+    0%{
+        transform: translateX(0);
+    }
+    20%,
+    40%,
+    60%,
+    80%{
+        transform: translateX(10px);
+    }
+    10%,
+    30%,
+    50%{
+        transform: translateX(-10px);
+    }
+    70%,
+    100%{
+        transform: translateX(0);
+    }
+
+}
+
+.order-1{
+    order: -1;
+}
+.order-2{
+    order: -2;
+}
+.order-3{
+    order: -3;
+}
+.order-4{
+    order: -4;
+}
+.order-5{
+    order: -5;
+}
+.order-6{
+    order: -6;
+}
+.order-7{
+    order: -7;
+}
+.order-8{
+    order: -8;
+}
+.order-9{
+    order: -9;
+}
+.order-10{
+    order: -10;
+}
+.order-11{
+    order: -11;
+}
+.order-12{
+    order: -12;
+}
+.order-13{
+    order: -13;
+}
+.order-14{
+    order: -14;
+}
+.order-15{
+    order: -15;
+}
+.order-16{
+    order: -16;
+}
+.win{
+    position: absolute;
+    top: 10%;
+    right: 46%;
+    background-color:white ;
+    color: #5080fe;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    display: none;
+}
+.display{
+    display: block !important;
+}
+.tranpirant{
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
