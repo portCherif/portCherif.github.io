@@ -1,91 +1,154 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Checkout</title>
-
-    <!-- This code is needed for responsive design to work.
-      (Responsive design = make the website look good on
-      smaller screen sizes like a phone or a tablet). -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Load a font called Roboto from Google Fonts. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Here are the CSS files for this page. -->
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/logo.jpg">
+    <link rel="stylesheet" href="styles/shared/cart.css">
     <link rel="stylesheet" href="styles/shared/general.css">
-    <link rel="stylesheet" href="styles/pages/checkout/checkout-header.css">
-    <link rel="stylesheet" href="styles/pages/checkout/checkout.css">
-  
-    <!-- This is the site logo-->
-    <link rel="icon" type="image/png" href="images/amazon-mobile-logo-white.png">
-  </head>
-  <body>
-    <div class="checkout-header">
-      <div class="header-content">
-        <div class="checkout-header-left-section">
-          <a href="amazon.html">
-            <img class="amazon-logo" src="images/amazon-logo.png">
-            <img class="amazon-mobile-logo" src="images/amazon-mobile-logo.png">
-          </a>
-        </div>
-
-        <div class="checkout-header-middle-section">
-          Checkout (<a class="return-to-home-link"
-            href="amazon.html"><span class="js-return-to-home-link-number"></span> items</a>)
-        </div>
-
-        <div class="checkout-header-right-section">
-          <img src="images/icons/checkout-lock-icon.png">
-        </div>
-      </div>
+    <link rel="stylesheet" href="styles/pages/checkout.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cart-button-container">
+        <img class="cart-shopping-bag" src="assets/shopping-bag.png" alt="">
+        <span class="cart-button-quntity-number">0</span>
     </div>
-
-    <div class="main">
-      <div class="page-title">Review your order</div>
-
-      <div class="checkout-grid">
-        <div class="js-order-summary order-summary">
-          
+    
+    <div class="cart-container ">
+        <div class="cart-header">
+            <h2 class="cart-header-quntity">Cart • 0</h2>
+            <button class="cart-off">X</button>
         </div>
-
-        <div class="payment-summary">
-          <div class="payment-summary-title">
-            Order Summary
-          </div>
-          
-          <div class="payment-summary-row">
-            <div>Items (<span class="js-return-to-home-link-number">0</span>):</div>
-            <div class="payment-summary-money js-payment-summary-money"></div>
-          </div>
-
-          <div class="payment-summary-row">
-            <div>Shipping &amp; handling:</div>
-            <div class="payment-summary-money ">$<span class="js-payment-summary-money-shipping">4.99</span></div>
-          </div>
-
-          <div class="payment-summary-row subtotal-row">
-            <div>Total before tax:</div>
-            <div class="payment-summary-money">$<span class="js-payment-summary-money-befor-tax"></span></div>
-          </div>
-
-          <div class="payment-summary-row">
-            <div>Estimated tax (10%):</div>
-            <div class="payment-summary-money">$<span class="js-payment-summary-money-tax"></span></div>
-          </div>
-
-          <div class="payment-summary-row total-row">
-            <div>Order total:</div>
-            <div class="payment-summary-money">$<span class="js-payment-summary-total-money"></span></div>
-          </div>
-
-          <button class="place-order-button button-primary">
-            Place your order
-          </button>
+        <div class="cart-items">
+            <p class="empty-cart">Your cart is empty</p>
         </div>
-      </div>
+        <a href="checkout.html"><button class="cart-checkout">Checkout • <span class="checkout-price"></span>DA</button></a>
     </div>
-    <script type="module" src="scripts/chechout.js"></script>
-  </body>
+    <header>
+        <a href="index.html" class="logo-container"><img src="assets/logo.png" class="logo"></a>
+    </header>
+    <main>
+        
+        <section class="form-section">
+            <div class="form-container">
+                <h1>Delivery</h1>
+                <form action="https://script.google.com/macros/s/AKfycbx5KHqiTdwZDQXsAPIERz-yDW-9LGSFnc5_4_NzIgcHY_NtJ5ZWkBydAbQ4GpGnpg8/exec" method="post">
+                    <input required class="name"  placeholder="name" name="name" type="text">
+                    <input required class="phone"  placeholder="phone" name="phone" type="text">
+                    <select required class="wilaya"  name="wilaya" class="wilaya" >
+                        <option selected hidden >الولاية</option>
+                        <option value="Adrar">	Adrar</option>
+                        <option value="Chlef">Chlef</option>
+                        <option value="Laghouat">	Laghouat</option>
+                        <option value="Oum El Bouaghi">Oum El Bouaghi</option>
+                        <option value="Batna">Batna</option>
+                        <option value="Béjaïa">Béjaïa</option>
+                        <option value="Biskra">Biskra</option>
+                        <option value="Béchar">Béchar</option>
+                        <option value="Blida">Blida</option>
+                        <option value="Bouira">Bouira</option>
+                        <option value="Tamanrasset">Tamanrasset</option>
+                        <option value="Tébessa">Tébessa</option>
+                        <option value="Tlemcen">Tlemcen</option>
+                        <option value="Tiaret">Tiaret</option>
+                        <option value="Tizi Ouzou	">Tizi Ouzou	</option>
+                        <option value="Alger">Alger</option>
+                        <option value="Djelfa">Djelfa</option>
+                        <option value="Jijel">Jijel</option>
+                        <option value="Sétif">Sétif</option>
+                        <option value="Saïda">Saïda</option>
+                        <option value="Skikda">Skikda</option>
+                        <option value="Sidi Bel Abbès">Sidi Bel Abbès</option>
+                        <option value="Annaba">Annaba</option>
+                        <option value="Guelma">Guelma</option>
+                        <option value="Constantine">Constantine</option>
+                        <option value="Médéa">Médéa</option>
+                        <option value="Mostaganem">	Mostaganem</option>
+                        <option value="M'Sila">	M'Sila</option>
+                        <option value="Mascara">	Mascara</option>
+                        <option value="Ouargla">Ouargla</option>
+                        <option value="Oran">	Oran</option>
+                        <option value="El Bayadh	">El Bayadh	</option>
+                        <option value="Illizi">Illizi</option>
+                        <option value="Bordj Bou Arreridj">Bordj Bou Arreridj</option>
+                        <option value="Boumerdès">Boumerdès</option>
+                        <option value="El Tarf">El Tarf</option>
+                        <option value="Tindouf">Tindouf</option>
+                        <option value="Tissemsilt">Tissemsilt</option>
+                        <option value="El Oued">	El Oued</option>
+                        <option value="Khenchela">	Khenchela</option>
+                        <option value="Souk Ahras">	Souk Ahras</option>
+                        <option value="Tipaza">	Tipaza</option>
+                        <option value="Mila">	Mila</option>
+                        <option value="Aïn Defla">	Aïn Defla</option>
+                        <option value="Naâma">Naâma</option>
+                        <option value="Aïn Témouchent">Aïn Témouchent</option>
+                        <option value="Ghardaïa">Ghardaïa</option>
+                        <option value="Relizane">Relizane</option>
+                        <option value="Timimoun">Timimoun</option>
+                        <option value="Ouled Djellal">Ouled Djellal</option>
+                        <option value="Beni Abbes">Beni Abbes</option>
+                        <option value="In Salah">	In Salah</option>
+                        <option value="Touggourt">Touggourt</option>
+                        <option value="El M'Ghair">	El M'Ghair</option>
+                        <option value="El Meniaa">	El Meniaa</option>
+                    </select>
+                    <input required class="baldia"  placeholder="baldia" name="baldia" type="text">
+                    <select required class="shippingmethod" name="shippingmethod" class="shippingmethod" >
+                        <option selected hidden >طريقة التوصيل</option>
+                        <option value="بيت">بيت</option>
+                        <option value="مكتب">مكتب</option>
+                    </select>
+                    <div class="hidden-inputs">
+                       
+                        <input required  name="totalPrice" id="totalPrice" type="hidden">
+                    </div>
+                    
+                    <button type="submit" class="submit-button">أطلب الان</button>
+                </form>
+            </div>
+        </section>
+        <section class="order-details-section">
+            <div class="order-details-container">
+                <div class="order-summary-title">Order Summary</div>
+
+                <div class="product-items-container">
+                </div>
+    
+                <div class="order-price-cintainer">
+    
+                    <div class="nospasing subtotal prcie-c">
+                        <div class="nospasing subtotal-text">Subtotal</div>
+                        <div class="nospasing subtotal-price">
+                            <span class="nospasing js-subtotal-price" ></span>Da
+                        </div>
+                    </div>
+    
+                    <div class="nospasing shipping prcie-c">
+                        <div class="nospasing shipping-text">Shipping</div>
+                        <div class="nospasing shipping-price">
+                            <span class="nospasing js-shipping-price">ادخل الولاية و طريقة التوصيل لتحديد السعر</span>
+                            <span class="shipping-da"></span>
+                        </div>
+                    </div>
+    
+                    <div class="nospasing total prcie-c">
+                        <div class="nospasing total-text">Total</div>
+                        <div class="nospasing total-price">
+                            <span class="js-total-price total-price"></span>DA
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+
+    <script type="module" src="scripts/checkout.js"></script>
+    <script type="module" src="scripts/cart.js"></script>
+</body>
 </html>

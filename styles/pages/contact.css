@@ -1,0 +1,15 @@
+.top-section{
+    margin: 0 588.5px;
+    padding: 36px 0;
+}
+.top-section h1 {
+    font-size: 67.6px;
+    font-weight: 700;
+}
+.top-section p ,.top-section strong a{
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: 25px;
+    color: #11151CBF;
+    text-decoration: none;
+}
