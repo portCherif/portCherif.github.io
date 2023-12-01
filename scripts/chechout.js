@@ -1,7 +1,7 @@
 import {cart,removeFromCart} from './cart.js'
 
 const products = JSON.parse(localStorage.getItem('apiData'))
-
+if(products,cart){
 
 cart.forEach((cartItem)=>{
   products.forEach((product)=>{
@@ -260,4 +260,4 @@ function shippingPrice(option ,option2,option2Price, priceCents){
   }
   shippingPrice(2,3,9.99,499)
   shippingPrice(3,2,4.99,999)
-  
+}
