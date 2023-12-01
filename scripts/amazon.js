@@ -1,7 +1,7 @@
 import {cart,addToCart} from './cart.js'
 
 const products = JSON.parse(localStorage.getItem('apiData'))
-
+if(products){
 let productsHTML = '';
 products.forEach(product => {
   productsHTML +=`
@@ -98,5 +98,5 @@ document.querySelector('.js-search-bar').addEventListener('input', e=>{
       PDN.toUpperCase().includes(value.toUpperCase()) ? PCS.remove('display-none') :    PCS.add('display-none')
     });
 });
-
+}
  
